@@ -1,5 +1,9 @@
 package lab_04;
-
+import java.util.List;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
 public class Lab_4_1 {
 
     public static void main(String[] args) {
