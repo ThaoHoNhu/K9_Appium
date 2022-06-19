@@ -16,6 +16,7 @@ public class Lab_3_2 {
         for (int i = 1; i < intArr.length; i++) {
             if (max > intArr[i]) {
                 max = max;
+
             } else {
                 max = intArr[i];
             }
