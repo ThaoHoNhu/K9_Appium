@@ -1,4 +1,6 @@
 package lab_08;
+import lab_07_2.AnimalRacing;
+
 import java.util.*;
 import java.security.SecureRandom;
 import static lab_08.Animal.Builder;
@@ -41,22 +43,23 @@ public class AnimalController {
         totalAnimal.add(dog);
         totalAnimal.add(falcon);
 
-        for (int a = 1; a < totalAnimal.size(); a++) {
-            if (totalAnimal.get(a).isFlyable()) {
-                totalAnimal.remove(a);
-            }
-        }
-
-        Animal max = totalAnimal.get(0);
-        for (int i = 1; i < totalAnimal.size(); i++) {
-            //totalAnimal.get(i).remove();
-            if ( max.getSpeed() > totalAnimal.get(i).getSpeed()){
-                max = max;
-            } else {
-                max = totalAnimal.get(i);
-            }
-        }
+        Animal max = getMaxSpeedAnimal(totalAnimal);
         System.out.println("Winner is " + max.getName() + " with speed: " + max.getSpeed());
+    }
 
+    public static Animal getMaxSpeedAnimal(List<Animal> animalList) {
+        Animal max = animalList.get(0);
+        for (int i = 1; i < animalList.size(); i++) {
+            if (animalList.get(i).isFlyable()) {
+                animalList.remove(i);
+           } else {
+                if (max.getSpeed() > animalList.get(i).getSpeed()) {
+                    max = max;
+                } else {
+                    max = animalList.get(i);
+                }
+            }
+        }
+        return max;
     }
 }
