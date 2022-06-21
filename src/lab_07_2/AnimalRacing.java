@@ -4,11 +4,11 @@ import java.util.*;
 import java.security.SecureRandom;
 
 
-public class Animal {
+public class AnimalRacing {
     private String name;
     private int speed;
 
-    public Animal(int maxSpeed ) {
+    public AnimalRacing(int maxSpeed ) {
         this.speed = new SecureRandom().nextInt(maxSpeed);
     }
 
@@ -19,4 +19,6 @@ public class Animal {
     public int getSpeed() {
         return speed;
     }
+
+
 }

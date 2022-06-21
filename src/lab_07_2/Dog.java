@@ -1,7 +1,7 @@
 package lab_07_2;
 
 import java.util.*;
-public class Dog extends Animal {
+public class Dog extends AnimalRacing {
     private static int DOG_MAX_SPEED = 60;
 
     public Dog() {
