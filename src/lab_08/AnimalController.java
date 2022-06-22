@@ -40,8 +40,9 @@ public class AnimalController {
         List <Animal> totalAnimal = new ArrayList<>();
         totalAnimal.add(tiger);
         totalAnimal.add(horse);
-        totalAnimal.add(dog);
         totalAnimal.add(falcon);
+        totalAnimal.add(dog);
+
 
         Animal max = getMaxSpeedAnimal(totalAnimal);
         System.out.println("Winner is " + max.getName() + " with speed: " + max.getSpeed());
@@ -51,7 +52,8 @@ public class AnimalController {
         Animal max = animalList.get(0);
         for (int i = 1; i < animalList.size(); i++) {
             if (animalList.get(i).isFlyable()) {
-                animalList.remove(i);
+                //animalList.remove(i);
+                System.out.println(animalList.get(i).getName());
            } else {
                 if (max.getSpeed() > animalList.get(i).getSpeed()) {
                     max = max;
