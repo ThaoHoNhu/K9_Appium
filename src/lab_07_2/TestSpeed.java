@@ -18,21 +18,19 @@ public class TestSpeed {
         animalList.add(horse);
         animalList.add(dog);
 
-        AnimalRacing max = getMaxSpeedAnimal(animalList);
-        System.out.println("Winner is " + max.getClass().getSimpleName() + " with speed: " + max.getSpeed());
+        AnimalRacing maxAnimal = getMaxSpeedAnimal(animalList);
+        System.out.println("Winner is " + maxAnimal.getClass().getSimpleName() + " with speed: " + maxAnimal.getSpeed());
 
     }
 
     public static AnimalRacing getMaxSpeedAnimal(List<AnimalRacing> animalList) {
-        AnimalRacing max = animalList.get(0);
+        AnimalRacing maxAnimal = animalList.get(0);
         for (int i = 1; i < animalList.size(); i++) {
-            if (max.getSpeed() > animalList.get(i).getSpeed()) {
-                max = max;
-            } else {
-                max = animalList.get(i);
+            if (animalList.get(i).getSpeed() > maxAnimal.getSpeed()) {
+                maxAnimal = animalList.get(i);
             }
         }
-        return max;
+        return maxAnimal;
     }
 }
 
