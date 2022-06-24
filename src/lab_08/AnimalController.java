@@ -1,5 +1,4 @@
 package lab_08;
-import lab_07_2.AnimalRacing;
 
 import java.util.*;
 import java.security.SecureRandom;
@@ -42,7 +41,7 @@ public class AnimalController {
         totalAnimal.add(horse);
         totalAnimal.add(falcon);
         totalAnimal.add(dog);
-        
+
         Animal maxAnimal = getMaxSpeedAnimal(totalAnimal);
         System.out.println("Winner is " + maxAnimal.getName() + " with speed: " + maxAnimal.getSpeed());
     }
