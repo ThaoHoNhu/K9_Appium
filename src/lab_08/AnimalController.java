@@ -42,26 +42,22 @@ public class AnimalController {
         totalAnimal.add(horse);
         totalAnimal.add(falcon);
         totalAnimal.add(dog);
-
-
-        Animal max = getMaxSpeedAnimal(totalAnimal);
-        System.out.println("Winner is " + max.getName() + " with speed: " + max.getSpeed());
+        
+        Animal maxAnimal = getMaxSpeedAnimal(totalAnimal);
+        System.out.println("Winner is " + maxAnimal.getName() + " with speed: " + maxAnimal.getSpeed());
     }
 
     public static Animal getMaxSpeedAnimal(List<Animal> animalList) {
-        Animal max = animalList.get(0);
+        Animal maxAnimal = animalList.get(0);
         for (int i = 1; i < animalList.size(); i++) {
             if (animalList.get(i).isFlyable()) {
-                //animalList.remove(i);
                 System.out.println(animalList.get(i).getName());
            } else {
-                if (max.getSpeed() > animalList.get(i).getSpeed()) {
-                    max = max;
-                } else {
-                    max = animalList.get(i);
+                if (animalList.get(i).getSpeed() > maxAnimal.getSpeed()) {
+                    maxAnimal = animalList.get(i);
                 }
             }
         }
-        return max;
+        return maxAnimal;
     }
 }
