@@ -2,12 +2,11 @@ package lab_09;
 import java.util.*;
 import java.security.SecureRandom;
 
-public class Dog extends Animal {
+public class Tiger extends Animal {
 
-    private static int DOG_MAX_SPEED = 60;
+    private static int TIGER_MAX_SPEED = 100;
 
-    public Dog() {
-        super(DOG_MAX_SPEED);
+    public Tiger() {super(TIGER_MAX_SPEED);
     }
 
     @Override
